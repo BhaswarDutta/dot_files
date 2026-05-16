@@ -1,0 +1,100 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "'JetBrainsMono Nerd Font','JetBrains Mono','Droid Sans Mono', 'monospace', monospace",
+  "editor.minimap.enabled": false,
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.lineHeight": 28,
+  "editor.formatOnSave": true,
+  "workbench.sideBar.location": "right",
+  "editor.copyWithSyntaxHighlighting": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.emptySelectionClipboard": false,
+  "workbench.editor.enablePreview": false,
+  "window.newWindowDimensions": "inherit",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "files.trimTrailingWhitespace": true,
+  "diffEditor.renderSideBySide": false,
+  "editor.snippetSuggestions": "top",
+  "editor.detectIndentation": false,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "workbench.editor.showTabs": "multiple",
+  "editor.lineNumbers": "on",
+  "editor.guides.indentation": true,
+
+  // Silence the Noise
+
+  "breadcrumbs.enabled": false,
+  "scm.diffDecorations": "none",
+  "editor.hover.delay": 500,
+  "editor.hover.enabled": "on",
+  "editor.matchBrackets": "never",
+  "workbench.tips.enabled": false,
+  "editor.colorDecorators": false,
+  "git.decorations.enabled": false,
+  "editor.lightbulb.enabled": "off",
+  "editor.selectionHighlight": true,
+  "editor.overviewRulerBorder": false,
+  "editor.renderLineHighlight": "none",
+  "editor.occurrencesHighlight": "off",
+  "problems.decorations.enabled": true,
+  "editor.renderControlCharacters": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "editor.suggestFontSize": 16,
+  "editor.mouseWheelZoom": true,
+  "workbench.navigationControl.enabled": false,
+  "window.commandCenter": false,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.startupEditor": "none",
+  "security.workspace.trust.untrustedFiles": "open",
+  "telemetry.telemetryLevel": "off",
+  "editor.wordWrap": "on",
+  "window.restoreWindows": "none",
+  "editor.semanticHighlighting.enabled": true,
+  "material-icon-theme.folders.associations": {
+    "login": "client",
+    "working": "src"
+  },
+  "interactiveWindow.promptToSaveOnClose": true,
+  "interactiveWindow.executeWithShiftEnter": true,
+  "workbench.editor.editorActionsLocation": "hidden",
+  "git.autofetch": true,
+  "workbench.activityBar.location": "top",
+  "files.exclude": {
+    "**/.git": false
+  },
+  "explorer.compactFolders": false,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "×": true
+  },
+
+  // Language-specific settings for Python
+
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+
+  // Global Python configuration
+
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoSearchPaths": true,
+  "python.createEnvironment.trigger": "off",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.productIconTheme": "material-product-icons",
+  "window.menuBarVisibility": "compact",
+  "window.customMenuBarAltFocus": false,
+  "chat.disableAIFeatures": true,
+  "editor.padding.bottom": 30,
+  "editor.padding.top": 30
+}
