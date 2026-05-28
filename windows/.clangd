@@ -1,0 +1,5 @@
+CompileFlags:
+  Compiler: C:/Users/Bash/mingw64/bin/gcc.exe
+  Add:
+    - '-xc'
+    - '--target=x86_64-w64-mingw32'

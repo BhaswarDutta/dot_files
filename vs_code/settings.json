@@ -9,7 +9,7 @@
   "workbench.sideBar.location": "right",
   "editor.copyWithSyntaxHighlighting": false,
   "diffEditor.ignoreTrimWhitespace": false,
-  "editor.emptySelectionClipboard": false,
+  "editor.emptySelectionClipboard": true,
   "workbench.editor.enablePreview": false,
   "window.newWindowDimensions": "inherit",
   "editor.multiCursorModifier": "ctrlCmd",
@@ -96,5 +96,10 @@
   "window.customMenuBarAltFocus": false,
   "chat.disableAIFeatures": true,
   "editor.padding.bottom": 30,
-  "editor.padding.top": 30
+  "editor.padding.top": 30,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font','JetBrains Mono','Droid Sans Mono', 'monospace', monospace",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontLigatures.enabled": true
 }
