@@ -1,7 +1,7 @@
-set -gx MANPAGER "bat -plman"
 if status is-interactive
     set fish_greeting ""
     starship init fish | source
+    fastfetch
 end
 
 alias ls='eza --icons=always -a'
@@ -10,7 +10,7 @@ alias cd='z'
 alias cat='bat'
 alias zed='zeditor'
 alias hx='/opt/helix/hx'
-alias btop='btop --force-utf'
+
 set -gx EDITOR nvim
 
 function y
@@ -69,37 +69,4 @@ function fish_command_not_found
     end
 
     return 127
-end
-
-# uv
-fish_add_path "/home/bash/.local/bin"
-
-function transcode_dnxhr
-    for input in $argv
-        if not test -f "$input"
-            echo "Error: file not found: $input"
-            continue
-        end
-
-        set dir (dirname "$input")
-        set filename (basename "$input")
-        set stem (string replace -r '\.[^.]+$' '' "$filename")
-        set output "$dir/{$stem}_DNxHR.mov"
-
-        echo "Transcoding:"
-        echo "  Input : $input"
-        echo "  Output: $output"
-
-        ffmpeg -i "$input" \
-            -c:v dnxhd \
-            -profile:v dnxhr_hqx \
-            -c:a pcm_s24le \
-            "$output"
-
-        if test $status -eq 0
-            echo "✓ Done: $output"
-        else
-            echo "✗ Failed: $input"
-        end
-    end
 end

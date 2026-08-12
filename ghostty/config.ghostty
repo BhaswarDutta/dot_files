@@ -1,0 +1,8 @@
+theme=TokyoNight
+cursor-style=bar
+background-opacity=0.95
+background-blur=true
+window-padding-x=30
+window-padding-y=30
+window-decoration=none
+font-size=13

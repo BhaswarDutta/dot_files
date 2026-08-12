@@ -3,7 +3,7 @@
     "enabled": false,
   },
   "vim_mode": false,
-  "tab_size": 4,
+  "tab_size": 2,
   "hard_tabs": false,
   "outline_panel": {
     "dock": "right",
@@ -39,7 +39,7 @@
   "theme": {
     "mode": "dark",
     "light": "Catppuccin Latte (Blur)",
-    "dark": "Catppuccin Mocha (Blur)",
+    "dark": "Tokyo Night",
   },
 
   "current_line_highlight": "none",
@@ -79,12 +79,12 @@
     "Python": {
       "language_servers": ["pyright", "ruff"],
       "format_on_save": "on",
-      "formatter": {
-        "external": {
-          "command": "black",
-          "arguments": ["-"],
-        },
-      },
+      // "formatter": {
+      //   "external": {
+      //     "command": "black",
+      //     "arguments": ["-"],
+      //   },
+      // },
     },
     "C": {
       "language_servers": ["clangd"],
@@ -103,11 +103,11 @@
     "cursor_shape": "bar",
     "blinking": "on",
   },
-  "lsp": {
-    "clangd": {
-      "binary": {
-        "arguments": ["--query-driver=C:\\Users\\Bash\\mingw64\\bin\\gcc.exe"],
-      },
-    },
-  },
+  // "lsp": {
+  //   "clangd": {
+  //     "binary": {
+  //       "arguments": ["--query-driver=C:\\Users\\Bash\\mingw64\\bin\\gcc.exe"],
+  //     },
+  //   },
+  // },
 }
