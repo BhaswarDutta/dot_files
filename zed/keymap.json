@@ -13,13 +13,32 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-b": "workspace::ToggleRightDock"
-    }
+      "ctrl-b": "workspace::ToggleRightDock",
+      "ctrl-alt-b": "workspace::ToggleLeftDock",
+    },
   },
   {
     "context": "Workspace",
     "unbind": {
-      "ctrl-alt-b": "workspace::ToggleRightDock"
-    }
-  }
+      "ctrl-alt-b": "workspace::ToggleRightDock",
+    },
+  },
+
+  // Make Ctrl+W close editor tabs, not docks
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-w": "workspace::CloseActiveDock",
+    },
+  },
+  {
+    "bindings": {
+      "ctrl-w": [
+        "pane::CloseActiveItem",
+        {
+          "close_pinned": false,
+        },
+      ],
+    },
+  },
 ]
