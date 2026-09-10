@@ -8,7 +8,7 @@ config.initial_rows = 28
 config.font = wezterm.font('JetBrainsMono Nerd Font')
 config.font_size = 12
 
-config.color_scheme = 'catppuccin-mocha'
+config.color_scheme = 'Tokyo Night'
 config.default_prog = { 'pwsh.exe', '-NoLogo' }
 
 config.use_fancy_tab_bar = false
@@ -17,99 +17,108 @@ config.hide_tab_bar_if_only_one_tab = true
 config.show_tab_index_in_tab_bar = false
 config.show_new_tab_button_in_tab_bar = false
 
-config.window_decorations = "RESIZE"
+config.window_decorations = "TITLE | RESIZE"
 
 config.window_close_confirmation = "NeverPrompt"
 
 config.window_padding = {
-    left = 30,
-    right = 30,
-    top = 30,
-    bottom = 30,
+  left = 30,
+  right = 30,
+  top = 30,
+  bottom = 30,
 }
 
 config.default_cursor_style = "SteadyBar"
 
 config.keys = {
-    {
-        key = "t",
-        mods = "CTRL",
-        action = wezterm.action.SpawnTab("CurrentPaneDomain"),
-    },
-    {
-        key = "T",
-        mods = "CTRL|SHIFT",
-        action = wezterm.action.SpawnCommandInNewTab({
-            args = { "wsl.exe", "-d", "archlinux", "--cd", "~" },
-        }),
-    },
-    {
-        key = "v",
-        mods = "CTRL",
-        action = wezterm.action.PasteFrom("Clipboard"),
-    },
-    {
-        key = "w",
-        mods = "CTRL",
-        action = wezterm.action.CloseCurrentTab({ confirm = false }),
-    },
+  {
+    key = "t",
+    mods = "CTRL",
+    action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+  },
+  {
+    key = "T",
+    mods = "CTRL|SHIFT",
+    action = wezterm.action.SpawnCommandInNewTab({
+      args = { "wsl.exe", "-d", "archlinux", "--cd", "~" },
+    }),
+  },
+  {
+    key = "v",
+    mods = "CTRL",
+    action = wezterm.action.PasteFrom("Clipboard"),
+  },
+  {
+    key = "w",
+    mods = "CTRL",
+    action = wezterm.action.CloseCurrentTab({ confirm = false }),
+  },
 }
 
 config.colors = {
-    tab_bar = {
-        background = "#181825",
+  tab_bar = {
+    background = "#1a1b26",
 
-        active_tab = {
-            bg_color = "#cba6f7",
-            fg_color = "#11111b",
-        },
-
-        inactive_tab = {
-            bg_color = "#313244",
-            fg_color = "#cdd6f4",
-        },
-
-        inactive_tab_hover = {
-            bg_color = "#45475a",
-            fg_color = "#cdd6f4",
-        },
-
-        new_tab = {
-            bg_color = "#181825",
-            fg_color = "#6c7086",
-        },
-
-        new_tab_hover = {
-            bg_color = "#313244",
-            fg_color = "#cdd6f4",
-        },
+    active_tab = {
+      bg_color = "#7aa2f7",
+      fg_color = "#1a1b26",
     },
+
+    inactive_tab = {
+      bg_color = "#24283b",
+      fg_color = "#c0caf5",
+    },
+
+    inactive_tab_hover = {
+      bg_color = "#2f3549",
+      fg_color = "#c0caf5",
+    },
+
+    new_tab = {
+      bg_color = "#1a1b26",
+      fg_color = "#565f89",
+    },
+
+    new_tab_hover = {
+      bg_color = "#24283b",
+      fg_color = "#c0caf5",
+    },
+  },
 }
 
 wezterm.on("format-tab-title", function(tab)
-    local bg = "#313244"
-    local fg = "#cdd6f4"
+  local bg = "#24283b"
+  local fg = "#c0caf5"
 
-    if tab.is_active then
-        bg = "#cba6f7"
-        fg = "#11111b"
-    end
+  if tab.is_active then
+    bg = "#7aa2f7"
+    fg = "#1a1b26"
+  end
 
-    local title = tab.active_pane.title
+  local title = tab.active_pane.title
 
-    return {
-        { Background = { Color = "#181825" } },
-        { Foreground = { Color = bg } },
-        { Text = "" },
+  return {
+    { Background = { Color = "#1a1b26" } },
+    { Foreground = { Color = bg } },
+    { Text = "" },
 
-        { Background = { Color = bg } },
-        { Foreground = { Color = fg } },
-        { Text = " 󰆍 " .. title .. " " },
+    { Background = { Color = bg } },
+    { Foreground = { Color = fg } },
+    { Text = " 󰆍 " .. title .. " " },
 
-        { Background = { Color = "#181825" } },
-        { Foreground = { Color = bg } },
-        { Text = "" },
-    }
+    { Background = { Color = "#1a1b26" } },
+    { Foreground = { Color = bg } },
+    { Text = "" },
+  }
 end)
+
+-- Start WezTerm maximized
+local mux = wezterm.mux
+
+wezterm.on("gui-startup", function(cmd)
+  local tab, pane, window = mux.spawn_window(cmd or {})
+  window:gui_window():maximize()
+end)
+
 
 return config
