@@ -28,9 +28,9 @@
       "font": {
         "face": "JetBrainsMono Nerd Font"
       },
-      "opacity": 86,
+      "opacity": 100,
       "padding": "30",
-      "useAcrylic": true
+      "useAcrylic": false
     },
     "list": [
       {
@@ -57,6 +57,18 @@
         "hidden": true,
         "name": "Azure Cloud Shell",
         "source": "Windows.Terminal.Azure"
+      },
+      {
+        "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+        "hidden": false,
+        "name": "Ubuntu",
+        "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+      },
+      {
+        "guid": "{f520f7df-efb1-5b2b-9fda-9d178cc1860a}",
+        "hidden": false,
+        "name": "archlinux",
+        "source": "Microsoft.WSL"
       }
     ]
   },
@@ -177,42 +189,42 @@
       "yellow": "#F97E72"
     },
     {
-      "name": "Tokyo Night",
-      "foreground": "#a9b1dc",
-      "background": "#1a1b2c",
-      "cursorColor": "#c0caf5",
-      "selectionBackground": "#28344a",
-      "black": "#414868",
-      "red": "#f7768e",
-      "green": "#73daca",
-      "yellow": "#e0af68",
-      "blue": "#7aa2f7",
-      "purple": "#bb9af7",
-      "cyan": "#7dcfff",
-      "white": "#c0caf5",
+      "background": "#1A1B26",
+      "black": "#15161E",
+      "blue": "#7AA2F7",
       "brightBlack": "#414868",
-      "brightRed": "#f7768e",
-      "brightGreen": "#73daca",
-      "brightYellow": "#e0af68",
-      "brightBlue": "#7aa2f7",
-      "brightPurple": "#bb9af7",
-      "brightCyan": "#7dcfff",
-      "brightWhite": "#c0caf5"
+      "brightBlue": "#7AA2F7",
+      "brightCyan": "#7DCFFF",
+      "brightGreen": "#9ECE6A",
+      "brightPurple": "#BB9AF7",
+      "brightRed": "#F7768E",
+      "brightWhite": "#C0CAF5",
+      "brightYellow": "#E0AF68",
+      "cursorColor": "#C0CAF5",
+      "cyan": "#7DCFFF",
+      "foreground": "#C0CAF5",
+      "green": "#9ECE6A",
+      "name": "Tokyo Night",
+      "purple": "#BB9AF7",
+      "red": "#F7768E",
+      "selectionBackground": "#28344A",
+      "white": "#A9B1D6",
+      "yellow": "#E0AF68"
     }
   ],
-  "theme": "Catppuccin Mocha",
+  "theme": "Tokyo Night",
   "themes": [
     {
-      "name": "Catppuccin Mocha",
+      "name": "Tokyo Night",
       "tab": {
-        "background": "#1E1E2EFF",
+        "background": "#1A1B26FF",
         "iconStyle": "default",
         "showCloseButton": "always",
-        "unfocusedBackground": null
+        "unfocusedBackground": "#16161EFF"
       },
       "tabRow": {
-        "background": "#181825FF",
-        "unfocusedBackground": "#11111BFF"
+        "background": "#16161EFF",
+        "unfocusedBackground": "#16161EFF"
       },
       "window": {
         "applicationTheme": "dark",
@@ -223,5 +235,5 @@
       }
     }
   ],
-  "useAcrylicInTabRow": true
+  "useAcrylicInTabRow": false
 }
